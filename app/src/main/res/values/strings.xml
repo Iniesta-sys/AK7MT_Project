@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Project_AK7MT_v2</string>
+    <string name="aud_1_00">AUD: 1.00</string>
+    <string name="base_currency">AUD: 1.00</string>
+    <string name="czk">CZK:</string>
+    <string name="eur">EUR:</string>
+    <string name="usd">USD:</string>
 </resources>
