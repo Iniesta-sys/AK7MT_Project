@@ -3,7 +3,6 @@ package cz.utb.fai.project_ak7mt_v2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.gson.Gson
-import cz.utb.fai.project_ak7mt_v2.databinding.ActivityMainBinding
 import cz.utb.fai.project_ak7mt_v2.databinding.ActivityMainCurrencyBinding
 import java.io.InputStreamReader
 import java.net.URL
