@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import cz.utb.fai.project_ak7mt_v2.databinding.ActivityMainCurrencyEurBinding
+import cz.utb.fai.project_ak7mt_v2.databinding.ActivityMainCurrencyGbpBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

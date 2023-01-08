@@ -3,20 +3,20 @@ package cz.utb.fai.project_ak7mt_v2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.gson.Gson
-import cz.utb.fai.project_ak7mt_v2.databinding.ActivityMainCurrencyUsdBinding
+import cz.utb.fai.project_ak7mt_v2.databinding.ActivityMainCurrencyGbpBinding
 import java.io.InputStreamReader
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 
-class MainActivityCurrencyUSD : AppCompatActivity()
+class MainActivityCurrencyGBP : AppCompatActivity()
 {
-    private lateinit var binding: ActivityMainCurrencyUsdBinding
+    private lateinit var binding: ActivityMainCurrencyGbpBinding
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainCurrencyUsdBinding.inflate(layoutInflater)
+        binding = ActivityMainCurrencyGbpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         fetchCurrencyData().start()
@@ -26,7 +26,7 @@ class MainActivityCurrencyUSD : AppCompatActivity()
     private fun fetchCurrencyData(): Thread
     {
         return Thread {
-            val url = URL("https://open.er-api.com/v6/latest/eur")
+            val url = URL("https://open.er-api.com/v6/latest/gbp")
             val connection = url.openConnection() as HttpsURLConnection
 
             if(connection.responseCode == 200)
@@ -41,6 +41,7 @@ class MainActivityCurrencyUSD : AppCompatActivity()
             }
             else
             {
+
                 binding.baseCurrency.text = "Připojení se nezdařilo"
 
             }
