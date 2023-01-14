@@ -54,7 +54,7 @@ class MainActivityCurrencyGBP : AppCompatActivity()
         runOnUiThread{
             kotlin.run {
                 binding.lastUpdate.text = request.time_last_update_utc
-                binding.gbp.text = String.format("GBP:  %.3f", request.rates.GBP)
+                binding.czk.text = String.format("CZK:  %.3f", request.rates.CZK)
                 binding.eur.text = String.format("EUR:  %.3f", request.rates.EUR)
                 binding.usd.text = String.format("USD:  %.3f", request.rates.USD)
             }

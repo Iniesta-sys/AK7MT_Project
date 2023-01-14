@@ -56,6 +56,7 @@ class MainActivityCurrency : AppCompatActivity()
                 binding.gbp.text = String.format("GBP:  %.3f", request.rates.GBP)
                 binding.eur.text = String.format("EUR:  %.3f", request.rates.EUR)
                 binding.usd.text = String.format("USD:  %.3f", request.rates.USD)
+
             }
 
         }

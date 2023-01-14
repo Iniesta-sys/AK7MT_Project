@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Aktualizace"
-        android:textColor="@color/black"
+        android:textColor = "?android:textColorPrimary"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lastUpdate"
-        app:srcCompat="@drawable/pound_svgrepo_com" />
+        app:srcCompat="@drawable/euro_svgrepo_com" />
 
     <TextView
         android:id="@+id/baseCurrency"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="@string/base_currency"
-        android:textColor="@color/black"
+        android:textColor = "?android:textColorPrimary"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,33 +71,33 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/gbp"
-        android:textColor="@color/black"
+        android:textColor = "?android:textColorPrimary"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="@+id/gbpicon"
         app:layout_constraintStart_toStartOf="@+id/gbpicon"
         app:layout_constraintTop_toBottomOf="@id/gbpicon" />
 
     <ImageView
-        android:id="@+id/euricon"
+        android:id="@+id/czkicon"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/gbp"
-        app:srcCompat="@drawable/euro_svgrepo_com" />
+        app:srcCompat="@drawable/flag_for_czechia_svgrepo_com" />
 
     <TextView
-        android:id="@+id/eur"
+        android:id="@+id/czk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/eur"
-        android:textColor="@color/black"
+        android:text="@string/czk"
+        android:textColor = "?android:textColorPrimary"
         android:textSize="30dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/euricon"
-        app:layout_constraintStart_toStartOf="@+id/euricon"
-        app:layout_constraintTop_toBottomOf="@id/euricon"/>
+        app:layout_constraintEnd_toEndOf="@+id/czkicon"
+        app:layout_constraintStart_toStartOf="@+id/czkicon"
+        app:layout_constraintTop_toBottomOf="@id/czkicon"/>
 
     <ImageView
         android:id="@+id/usdicon"
@@ -106,7 +106,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/eur"
+        app:layout_constraintTop_toBottomOf="@id/czk"
 
 
         app:srcCompat="@drawable/dollar_symbol_svgrepo_com" />
@@ -117,7 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/usd"
-        android:textColor="@color/black"
+        android:textColor = "?android:textColorPrimary"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="@+id/usdicon"
         app:layout_constraintStart_toStartOf="@+id/usdicon"

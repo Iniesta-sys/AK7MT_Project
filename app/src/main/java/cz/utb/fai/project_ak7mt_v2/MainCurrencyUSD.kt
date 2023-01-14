@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.gson.Gson
 import cz.utb.fai.project_ak7mt_v2.databinding.ActivityMainCurrencyUsdBinding
+
 import java.io.InputStreamReader
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
@@ -26,7 +27,7 @@ class MainActivityCurrencyUSD : AppCompatActivity()
     private fun fetchCurrencyData(): Thread
     {
         return Thread {
-            val url = URL("https://open.er-api.com/v6/latest/eur")
+            val url = URL("https://open.er-api.com/v6/latest/usd")
             val connection = url.openConnection() as HttpsURLConnection
 
             if(connection.responseCode == 200)
@@ -55,7 +56,7 @@ class MainActivityCurrencyUSD : AppCompatActivity()
                 binding.lastUpdate.text = request.time_last_update_utc
                 binding.gbp.text = String.format("GBP:  %.3f", request.rates.GBP)
                 binding.eur.text = String.format("EUR:  %.3f", request.rates.EUR)
-                binding.usd.text = String.format("USD:  %.3f", request.rates.USD)
+                binding.czk.text = String.format("CZK:  %.3f", request.rates.CZK)
             }
 
         }

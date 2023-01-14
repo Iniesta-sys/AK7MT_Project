@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">Project_AK7MT_v2</string>
-    <string name="czk_1_000">CZK: 1.000</string>
-    <string name="base_currency">CZK: 1.000</string>
-    <string name="czk">CZK:</string>
+    <string name="base_1_000">1.000</string>
+    <string name="base_currency">Částka 1.000</string>
     <string name="eur">EUR:</string>
     <string name="usd">USD:</string>
     <string name="gbp">GBP:</string>
+    <string name="czk">CZK:</string>
+    <string name="euro">base_currency</string>
+
 </resources>
