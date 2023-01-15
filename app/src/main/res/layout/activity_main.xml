@@ -11,7 +11,7 @@
         android:id="@+id/test_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/gabriela"
         android:text="Kurzovní přehled"
         android:textColor="?android:textColorPrimary"
@@ -65,12 +65,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fourth_act_btn" />
 
+    <Button
+        android:id="@+id/six_act_btn"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="Moje poznámky"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/five_act_btn" />
+
     <TextView
         android:id="@+id/projekt_odznak"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
         android:text="Projekt AK7MT Adam Vrbík"
         android:textAllCaps="false"
         android:textColor = "?android:textColorPrimary"

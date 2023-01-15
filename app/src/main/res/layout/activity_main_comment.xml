@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainComment">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Moje poznámka"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="?android:textColorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/editFile"
+        app:layout_constraintStart_toStartOf="@+id/editFile"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignStart="@+id/btnSave"
+        android:layout_alignLeft="@+id/btnSave"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_marginTop="47dp"
+        android:ems="10"
+        android:hint="Název"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+
+    <EditText
+        android:id="@+id/editData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editFile"
+        android:layout_alignLeft="@+id/editFile"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Napiš poznámku"
+        android:lines="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFile" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:text="Uložit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editData" />
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnSave"
+        android:layout_alignEnd="@+id/editData"
+        android:layout_alignRight="@+id/editData"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
+        android:text="Zobrazit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editData" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

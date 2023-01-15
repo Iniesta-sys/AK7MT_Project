@@ -9,12 +9,10 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 
-class MainActivityCurrencyGBP : AppCompatActivity()
-{
+class MainActivityCurrencyGBP : AppCompatActivity() {
     private lateinit var binding: ActivityMainCurrencyGbpBinding
 
-    override fun onCreate(savedInstanceState: Bundle?)
-    {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainCurrencyGbpBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -23,24 +21,19 @@ class MainActivityCurrencyGBP : AppCompatActivity()
     }
 
 
-    private fun fetchCurrencyData(): Thread
-    {
+    private fun fetchCurrencyData(): Thread {
         return Thread {
             val url = URL("https://open.er-api.com/v6/latest/gbp")
             val connection = url.openConnection() as HttpsURLConnection
 
-            if(connection.responseCode == 200)
-
-            {
+            if (connection.responseCode == 200) {
                 val inputSystem = connection.inputStream
                 val inputStreamReader = InputStreamReader(inputSystem, "UTF-8")
                 val request = Gson().fromJson(inputStreamReader, Request::class.java)
                 updateUI(request)
                 inputStreamReader.close()
                 inputSystem.close()
-            }
-            else
-            {
+            } else {
 
                 binding.baseCurrency.text = "Připojení se nezdařilo"
 
@@ -49,9 +42,8 @@ class MainActivityCurrencyGBP : AppCompatActivity()
 
     }
 
-    private fun updateUI(request: Request)
-    {
-        runOnUiThread{
+    private fun updateUI(request: Request) {
+        runOnUiThread {
             kotlin.run {
                 binding.lastUpdate.text = request.time_last_update_utc
                 binding.czk.text = String.format("CZK:  %.3f", request.rates.CZK)
